@@ -22,7 +22,14 @@ export default function Images(props) {
       return (
         <div className="images">
           <ResponsiveMasonry
-            columnsCountBreakPoints={{ 500: 1, 750: 2, 850: 3, 1024: 4 }}
+            columnsCountBreakPoints={{
+              300: 1,
+              500: 1,
+              750: 2,
+              850: 3,
+              1024: 3,
+              1025: 4,
+            }}
           >
             <Masonry>
               {props.input.results.map(function (photo, index) {

@@ -25,7 +25,7 @@ export default function Search() {
 
   return (
     <div className="search">
-      <div className="container pt-5">
+      <div className="pt-5 d-flex justify-content-center">
         <form className="input-group search-form pb-3" onSubmit={handleSubmit}>
           <input
             type="search"

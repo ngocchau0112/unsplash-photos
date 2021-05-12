@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="credit">
+    <div className="credit container">
       This website was coded by{" "}
       <a
         href="https://github.com/ngocchau0112/"
