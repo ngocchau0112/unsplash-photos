@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Images(props) {
   let [searchItem, setSearchItem] = useState("");
@@ -10,7 +12,7 @@ export default function Images(props) {
     setLoaded(false);
   }, [props.input]);
 
-  function handleResponse(response) {
+  function handleResponse() {
     setSearchItem(props.search);
     setLoaded(true);
   }
@@ -33,7 +35,11 @@ export default function Images(props) {
                 return (
                   <div className="photo" key={index}>
                     <a href={imgSrc.full} target="_blank" rel="noreferrer">
-                      <img src={imgSrc.full} alt={index} />
+                      <LazyLoadImage
+                        src={imgSrc.full}
+                        alt={photo.alt_description}
+                        effect="blur"
+                      />
                     </a>
                   </div>
                 );

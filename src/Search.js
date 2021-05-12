@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Images from "./Images";
 import axios from "axios";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
 export default function Search() {
   const [searchItem, setSearchItem] = useState("");
@@ -38,7 +39,11 @@ export default function Search() {
           </button>
         </form>
       </div>
-      <Images input={photo} search={searchItem} />
+      <SimpleReactLightbox>
+        <SRLWrapper>
+          <Images input={photo} search={searchItem} />
+        </SRLWrapper>
+      </SimpleReactLightbox>
     </div>
   );
 }
