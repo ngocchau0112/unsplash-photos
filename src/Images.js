@@ -31,12 +31,12 @@ export default function Images(props) {
               const height = "316";
               const imgSrc = `https://source.unsplash.com/${photo.id}/${width}x${height}`;
               */
-                const imgSrc = photo.urls;
+                const imgSrc = photo.urls.full;
                 return (
                   <div className="photo" key={index}>
-                    <a href={imgSrc.full} target="_blank" rel="noreferrer">
+                    <a href={imgSrc} target="_blank" rel="noreferrer">
                       <LazyLoadImage
-                        src={imgSrc.full}
+                        src={imgSrc}
                         alt={photo.alt_description}
                         effect="blur"
                       />
