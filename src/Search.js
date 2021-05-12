@@ -25,7 +25,7 @@ export default function Search() {
   return (
     <div className="search">
       <div className="container pt-5">
-        <form className="input-group pb-3" onSubmit={handleSubmit}>
+        <form className="input-group search-form pb-3" onSubmit={handleSubmit}>
           <input
             type="search"
             id="inputSearch"
@@ -37,8 +37,8 @@ export default function Search() {
             <i className="fas fa-search"></i>
           </button>
         </form>
-        <Images input={photo} search={searchItem} />
       </div>
+      <Images input={photo} search={searchItem} />
     </div>
   );
 }
